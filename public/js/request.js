@@ -1,7 +1,7 @@
-Wisdom.Require.start('request');
-Wisdom.Require(['socket.io'], function(){
+SockHandle.Require.start('request');
+SockHandle.Require(['socket.io'], function(){
 	
-	Wisdom.Request = (function(){
+	SockHandle.Request = (function(){
 		window.WEB_SOCKET_SWF_LOCATION = '/swf/WebSocketMain.swf';
 		
 		var queued = [],
@@ -32,7 +32,7 @@ Wisdom.Require(['socket.io'], function(){
 			
 			socket.send({
 				time: time,
-				session: Wisdom.session,
+				session: SockHandle.session,
 				url: url,
 				data: data
 			});
@@ -52,5 +52,5 @@ Wisdom.Require(['socket.io'], function(){
 		return request;
 	})();
 	
-	Wisdom.Require.end('request');
+	SockHandle.Require.end('request');
 });

@@ -1,4 +1,4 @@
-Wisdom.Require = (function(dir, ext){
+SockHandle.Require = (function(dir, ext){
 	dir = dir || '';
 	ext = ext || '';
 	

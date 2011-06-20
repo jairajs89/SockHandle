@@ -1,0 +1,23 @@
+!!! 5
+html
+	head
+		title= 'wisdom.io'
+		link(rel='stylesheet', href='/css/styles.css')
+	
+	body
+		noscript#nojs
+			h2 Please Enable JavaScript!
+			p This site requires Javascript to function, but you seem to have it disabled.
+			p Please <a href="http://activatejavascript.org/" rel="nofollow" target="_blank">enable javascript</a>.
+		script
+			(function(){
+				var nojs = document.getElementById('nojs');
+				nojs && nojs.parentNode.removeChild(nojs);
+			})();
+		
+		#wrap
+		
+		script
+			Wisdom = { session: "#{session}" };
+		script(src='/js/require.js')
+		script(src='/js/wisdom.js')
